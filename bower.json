@@ -1,0 +1,17 @@
+{
+  "name": "savings",
+  "main": "savings.js",
+  "authors": [
+    "Bradley Kirk <iambradleyy@gmail.com>"
+  ],
+  "description": "",
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
