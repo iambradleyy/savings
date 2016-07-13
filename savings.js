@@ -13,10 +13,10 @@ $("#form-name").submit(function(e) {
         localStorage.setItem('username', username);
         $("#username").html(username);
         localStorage.setItem('targetAmount', targetAmount);
-        $("#alerts").html('<div class="alert alert-success" role="alert"><strong>Success! </strong> Information received.</div>');
+        $("#alerts").html('<div class="alert alert-success" role="alert"><i class="fa fa-check" aria-hidden="true"></i> <strong>Success! </strong> Information received.</div>');
     }
     else {
-        $("#alerts").html('<div class="alert alert-danger" role="alert"><strong>Whoops! </strong> We were unable to save your input because you missed some information.</div>');
+        $("#alerts").html('<div class="alert alert-danger" role="alert"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i> <strong>Whoops! </strong> We were unable to save your input because you missed some information.</div>');
     }
     e.preventDefault();
 });
