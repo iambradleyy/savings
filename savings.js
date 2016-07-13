@@ -8,10 +8,16 @@ $("#input-targetamount").val(localStorage.getItem('targetAmount'));
 // handle form submission
 $("#form-name").submit(function(e) {
     var username = $("#input-name").val();
-    localStorage.setItem('username', username);
-    $("#username").html(username);
     var targetAmount = $("#input-targetamount").val();
-    localStorage.setItem('targetAmount', targetAmount);
+    if (username.length && targetAmount.length) {
+        localStorage.setItem('username', username);
+        $("#username").html(username);
+        localStorage.setItem('targetAmount', targetAmount);
+        $("#alerts").html('<div class="alert alert-success" role="alert"><strong>Success! </strong> Information received.</div>');
+    }
+    else {
+        $("#alerts").html('<div class="alert alert-danger" role="alert"><strong>Whoops! </strong> We were unable to save your input because you missed some information.</div>');
+    }
     e.preventDefault();
 });
 
