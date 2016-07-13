@@ -50,6 +50,8 @@ $("#form-saved").submit(function(e) {
 
 function calcPercent(current, target) {
     var out = 0;
+    current = parseInt(current, 10);
+    target  = parseInt(target, 10);
     if (current <= target) {
         out = (current / target) * 100;
     }
