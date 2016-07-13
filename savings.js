@@ -17,3 +17,7 @@ $("#form-saved").submit(function(e) {
     localStorage.setItem('amountSaved', amountSaved);
     e.preventDefault();
 });
+
+function calcPercent(current, target) {
+    return (current / target)*100;
+}
