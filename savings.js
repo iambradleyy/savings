@@ -52,3 +52,10 @@ function calcPercent(current, target) {
     }
     return out;
 }
+
+$(".scroll-to").click(function(e) {
+    $('html, body').animate({
+        scrollTop: $($(this).attr('scroll-to')).offset().top
+    }, 1000);
+    e.preventDefault();
+});
