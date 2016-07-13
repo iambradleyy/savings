@@ -1,3 +1,6 @@
+// prefill the form if we have stored data
+$("#input-name").val(localStorage.getItem('username'));
+$("#input-targetamount").val(localStorage.getItem('targetAmount'));
 
 // handle form submission
 $("#form-name").submit(function(e) {
