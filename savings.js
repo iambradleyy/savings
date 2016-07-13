@@ -19,6 +19,26 @@ $("#form-name").submit(function(e) {
 $("#form-saved").submit(function(e) {
     var amountSaved = $("#input-amountsaved").val();
     localStorage.setItem('amountSaved', amountSaved);
+    var percentSaved = calcPercent(localStorage.getItem('amountSaved'), localStorage.getItem('targetAmount'));
+    console.log(percentSaved + "%");
+
+    $("#progress-bar").css("width", percentSaved + "%");
+    $("#progress-bar").html(percentSaved + "%");
+
+    $("#progress-bar").removeClass('progress-bar-success progress-bar-warning progress-bar-danger progress-bar-default progress-bar-info');
+    if (percentSaved <= 25) {
+        console.log('red');
+        $("#progress-bar").addClass('progress-bar-danger');
+    }
+    else if (percentSaved > 25 && percentSaved < 75) {
+        console.log('amber');
+        $("#progress-bar").addClass('progress-bar-warning');
+    }
+    else if (percentSaved >= 75) {
+        console.log('green');
+        $("#progress-bar").addClass('progress-bar-success');
+    }
+
     e.preventDefault();
 });
 
