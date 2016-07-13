@@ -10,3 +10,10 @@ $("#form-name").submit(function(e) {
     localStorage.setItem('targetAmount', targetAmount);
     e.preventDefault();
 });
+
+// handle form submission
+$("#form-saved").submit(function(e) {
+    var amountSaved = $("#input-amountsaved").val();
+    localStorage.setItem('amountSaved', amountSaved);
+    e.preventDefault();
+});
