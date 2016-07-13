@@ -43,5 +43,12 @@ $("#form-saved").submit(function(e) {
 });
 
 function calcPercent(current, target) {
-    return (current / target)*100;
+    var out = 0;
+    if (current <= target) {
+        out = (current / target) * 100;
+    }
+    else {
+        out = 100;
+    }
+    return out;
 }
