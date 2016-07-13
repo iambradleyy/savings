@@ -16,7 +16,6 @@
   ],
   "dependencies": {
     "bootstrap": "^3.3.6",
-    "js-cookie": "^2.1.2",
     "font-awesome": "^4.6.3"
   }
 }
