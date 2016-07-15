@@ -1,5 +1,6 @@
 .savingspig {
-    background-image: url("./savingpic.jpg");
+    background-image: url("./coins.jpg");
     background-size: cover;
-    min-height: 600px;
+    min-height: 650px;
+    color: white;
 }
